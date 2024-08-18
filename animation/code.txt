@@ -1,0 +1,58 @@
+import requests
+import os
+import json
+import utils
+from datetime import datetime
+
+class FacePPFaceAnalyser:
+    ALL_ATTRIBUTES = ['age', 'gender', 'emotion', 'beauty', 'smiling', 'eyestatus', 
+                      'mouthstatus', 'skinstatus']
+    
+    def __init__(self, photo_dir, photo_name, removed_attributes=[]):
+        self.api_key = os.getenv('FACEPP_API_KEY')
+        self.api_secret = os.getenv('FACEPP_API_SECRET')
+        self.api_url = 'https://api-us.faceplusplus.com/facepp/v3/detect'
+
+    def analyse_face(self):
+        start_time = datetime.now()
+
+        with open(self.source_image_path, 'rb') as source_image:
+            source_image_bytes = source_image.read()
+            print("Source:", self.source_image_path)
+            
+        try:
+            response = self.send_request(source_image_bytes)
+            print("Analyse complete.")
+            self.save_into_json(response.json())
+        except Exception as e:
+            print('Error occurred:', e)
+        end_time = datetime.now()
+        print("Duration (s):", (end_time - start_time).total_seconds())
+        
+    def send_request(self, image_bytes):
+        data = {
+            "api_key": self.api_key,
+            "api_secret": self.api_secret,
+            'return_landmark': 1,
+            'return_attributes': ','.join(self.get_required_attributes())
+        }
+        files = {'image_file': ('image.jpg', image_bytes)}
+
+        response = requests.post(self.api_url, data=data, files=files)
+        return response
+
+    def save_into_json(self, data):
+        with open(self.json_file_path, 'w') as json_file:
+            json.dump(data, json_file, indent=4)
+
+    def create_json_file_path(self, date_time):
+        json_file_name = f"{date_time}_{self.photo_name[:-4]}.json"
+        json_file_path = os.path.join(self.json_dir, json_file_name)
+        return json_file_path
+    
+    def run(self):
+        date_time = utils.get_datetime_string()
+        self.json_file_path = self.create_json_file_path(date_time)
+        self.analyse_face()
+
+"""

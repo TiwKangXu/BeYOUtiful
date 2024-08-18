@@ -1,0 +1,73 @@
+{
+    "SourceImageFace": {
+        "BoundingBox": {
+            "Width": 0.3674218952655792,
+            "Height": 0.2725116014480591,
+            "Left": 0.19224189221858978,
+            "Top": 0.2676997184753418
+        },
+        "Confidence": 99.99974822998047
+    },
+    "FaceMatches": [
+        {
+            "Similarity": 99.94475555419922,
+            "Face": {
+                "BoundingBox": {
+                    "Width": 0.3695935606956482,
+                    "Height": 0.28562456369400024,
+                    "Left": 0.4595303535461426,
+                    "Top": 0.22798918187618256
+                },
+                "Confidence": 99.99958038330078,
+                "Landmarks": [
+                    {
+                        "Type": "eyeLeft",
+                        "X": 0.6041119694709778,
+                        "Y": 0.32112962007522583
+                    },
+                    {
+                        "Type": "eyeRight",
+                        "X": 0.7551736831665039,
+                        "Y": 0.34877610206604004
+                    },
+                    {
+                        "Type": "mouthLeft",
+                        "X": 0.5723810791969299,
+                        "Y": 0.4222477376461029
+                    },
+                    {
+                        "Type": "mouthRight",
+                        "X": 0.6985281109809875,
+                        "Y": 0.4451097846031189
+                    },
+                    {
+                        "Type": "nose",
+                        "X": 0.6793107390403748,
+                        "Y": 0.38634875416755676
+                    }
+                ],
+                "Pose": {
+                    "Roll": 18.155393600463867,
+                    "Yaw": 10.839574813842773,
+                    "Pitch": 6.212243556976318
+                },
+                "Quality": {
+                    "Brightness": 93.53162384033203,
+                    "Sharpness": 92.22801208496094
+                }
+            }
+        }
+    ],
+    "UnmatchedFaces": [],
+    "ResponseMetadata": {
+        "RequestId": "db95b048-896a-4b2e-8df7-01c387fb2407",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+            "x-amzn-requestid": "db95b048-896a-4b2e-8df7-01c387fb2407",
+            "content-type": "application/x-amz-json-1.1",
+            "content-length": "912",
+            "date": "Thu, 15 Aug 2024 06:04:45 GMT"
+        },
+        "RetryAttempts": 0
+    }
+}

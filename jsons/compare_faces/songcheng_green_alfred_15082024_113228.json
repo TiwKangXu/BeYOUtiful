@@ -1,0 +1,70 @@
+{
+    "SourceImageFace": {
+        "BoundingBox": {
+            "Width": 0.06583341211080551,
+            "Height": 0.06868763267993927,
+            "Left": 0.4687735140323639,
+            "Top": 0.339461088180542
+        },
+        "Confidence": 84.80860900878906
+    },
+    "FaceMatches": [],
+    "UnmatchedFaces": [
+        {
+            "BoundingBox": {
+                "Width": 0.21919678151607513,
+                "Height": 0.18839427828788757,
+                "Left": 0.5191578269004822,
+                "Top": 0.15398819744586945
+            },
+            "Confidence": 99.9853515625,
+            "Landmarks": [
+                {
+                    "Type": "eyeLeft",
+                    "X": 0.6079591512680054,
+                    "Y": 0.22382435202598572
+                },
+                {
+                    "Type": "eyeRight",
+                    "X": 0.6897872090339661,
+                    "Y": 0.23623839020729065
+                },
+                {
+                    "Type": "mouthLeft",
+                    "X": 0.5944135785102844,
+                    "Y": 0.2911303639411926
+                },
+                {
+                    "Type": "mouthRight",
+                    "X": 0.6625579595565796,
+                    "Y": 0.30123600363731384
+                },
+                {
+                    "Type": "nose",
+                    "X": 0.6560220122337341,
+                    "Y": 0.2675778269767761
+                }
+            ],
+            "Pose": {
+                "Roll": 13.290327072143555,
+                "Yaw": 17.928464889526367,
+                "Pitch": 0.5753841996192932
+            },
+            "Quality": {
+                "Brightness": 90.60881042480469,
+                "Sharpness": 32.20803451538086
+            }
+        }
+    ],
+    "ResponseMetadata": {
+        "RequestId": "c44563e0-412c-4a05-bd3b-21de983285d5",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+            "x-amzn-requestid": "c44563e0-412c-4a05-bd3b-21de983285d5",
+            "content-type": "application/x-amz-json-1.1",
+            "content-length": "870",
+            "date": "Thu, 15 Aug 2024 03:32:30 GMT"
+        },
+        "RetryAttempts": 0
+    }
+}
