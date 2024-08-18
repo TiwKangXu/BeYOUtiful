@@ -52,6 +52,9 @@ class FacePPSkinAnalyser:
             json.dump(data, json_file, indent=4)
         print("Saved as " + self.json_file_path)
 
+    def get_json_file(self):
+        return self.json_file_path
+
     def create_json_file_path(self, date_time):
         json_file_name = f"{date_time}_{self.photo_name[:-4]}.json"
         json_file_path = os.path.join(self.json_dir, json_file_name)
@@ -62,5 +65,5 @@ class FacePPSkinAnalyser:
         self.json_file_path = self.create_json_file_path(date_time)
         self.analyse_skin()
 
-faceanalyser = FacePPSkinAnalyser("/Users/tiwkangxu/Desktop/NOC2024/Hackathon/BeYOUtiful/photos/me", "imc_glass.jpg")
-faceanalyser.run()
+# faceanalyser = FacePPSkinAnalyser("/Users/tiwkangxu/Desktop/NOC2024/Hackathon/BeYOUtiful/photos/me", "imc_glass.jpg")
+# faceanalyser.run()
