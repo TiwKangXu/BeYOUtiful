@@ -1,15 +1,22 @@
-import json
-import os
 import requests
+import os
+import json
 
 from datetime import datetime
 from utils.utils import Utils
 
 class FacePPSkinAnalyser:    
     def __init__(self, photo_dir, photo_name, removed_attributes=[]):
+        self.removed_attributes = removed_attributes
+        self.json_dir = Utils.parse_json_dir_path('facepp_skin_features')
+        self.photo_dir = photo_dir
+        self.photo_name = photo_name
+        self.source_image_path = os.path.join(self.photo_dir, self.photo_name)
+        self.json_file_path = ""
         self.api_key = os.getenv('FACEPP_API_KEY')
         self.api_secret = os.getenv('FACEPP_API_SECRET')
         self.api_url = 'https://api-us.faceplusplus.com/facepp/v1/skinanalyze'
+        self.response = None
 
     def analyse_skin(self):
         start_time = datetime.now()

@@ -1,6 +1,7 @@
 from camera import Camera
 # from face_analysers.face_analyser import FaceAnalyser
 from face_analysers.facepp_face_analyser import FacePPFaceAnalyser
+from skin_analysers.facepp_skin_analyser import FacePPSkinAnalyser
 
 camera = Camera()
 
