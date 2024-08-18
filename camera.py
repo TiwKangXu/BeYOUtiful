@@ -71,3 +71,4 @@ class Camera:
         self.launch_camera()
         self.kill_process()
 
+# camera = Camera()
