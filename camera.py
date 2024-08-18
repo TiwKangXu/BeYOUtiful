@@ -72,3 +72,4 @@ class Camera:
         self.kill_process()
 
 # camera = Camera()
+# camera.run()
