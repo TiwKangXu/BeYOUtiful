@@ -1,5 +1,7 @@
 from datetime import datetime
 
+from constants import BEYOUTIFUL_PATH
+
 class Utils:
     @staticmethod
     def get_datetime_string():
@@ -7,7 +9,7 @@ class Utils:
 
     @staticmethod
     def parse_json_dir_path(folder):
-        return '/Users/tiwkangxu/Desktop/NOC2024/Hackathon/BeYOUtiful/jsons/' + folder
+        return BEYOUTIFUL_PATH + '/jsons/' + folder
     
     @staticmethod
     def print_dic(dic):

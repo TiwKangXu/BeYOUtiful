@@ -73,5 +73,3 @@ class FacePPFaceAnalyser:
         self.json_file_path = self.create_json_file_path(date_time)
         self.analyse_face()
 
-# faceanalyser = FacePPFaceAnalyser("/Users/tiwkangxu/Desktop/NOC2024/Hackathon/BeYOUtiful/photos/me", "imc_glass.jpg")
-# faceanalyser.run()

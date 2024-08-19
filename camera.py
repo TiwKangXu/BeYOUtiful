@@ -1,6 +1,7 @@
 import cv2
 import os 
 
+from constants import GALLERY
 from utils.utils import Utils
 
 class Camera:
@@ -8,7 +9,7 @@ class Camera:
         self.cap = cv2.VideoCapture(0)
         self.ret = None
         self.frame = None
-        self.gallery = "/Users/tiwkangxu/Desktop/NOC2024/Hackathon/BeYOUtiful/gallery"
+        self.gallery = GALLERY
         self.photo_path = ""
         self.is_save_photo = True
 

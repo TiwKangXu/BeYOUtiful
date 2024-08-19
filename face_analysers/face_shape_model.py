@@ -1,8 +1,9 @@
 import pandas as pd
+from constants import BEYOUTIFUL_PATH
 from facepp_face_analyser import FacePPFaceAnalyser
 import os
 
-dir_path = '/Users/tiwkangxu/Desktop/NOC2024/Hackathon/BeYOUtiful/face_analysers/BeYOUtifulShapeDataset/training_set/Square'
+dir_path = BEYOUTIFUL_PATH + '/face_analysers/BeYOUtifulShapeDataset/training_set/Square'
 
 csv_file_path = 'faces_data_square.csv'
 file_exists = os.path.isfile(csv_file_path)

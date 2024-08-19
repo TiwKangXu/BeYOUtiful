@@ -4,6 +4,8 @@ import os
 import json
 from datetime import datetime
 
+from constants import BEYOUTIFUL_PATH
+
 def compare_faces(source_image_path, target_image_path, json_file_path, region_name='us-west-2'):
     # Initialize the Rekognition client
     client = boto3.client('rekognition', region_name=region_name)
@@ -50,10 +52,10 @@ def save_into_json(data, json_file_path):
 
 def main():
     # Set the directory for logs
-    log_dir = '/Users/tiwkangxu/Desktop/NOC2024/Hackathon/BeYOUtiful/logs/compare_faces'
-    json_dir = '/Users/tiwkangxu/Desktop/NOC2024/Hackathon/BeYOUtiful/jsons/compare_faces'
-    photo1_dir = '/Users/tiwkangxu/Desktop/NOC2024/Hackathon/BeYOUtiful/photos/twin'
-    photo2_dir = '/Users/tiwkangxu/Desktop/NOC2024/Hackathon/BeYOUtiful/photos/twin'
+    log_dir = BEYOUTIFUL_PATH + '/logs/compare_faces'
+    json_dir = BEYOUTIFUL_PATH + '/jsons/compare_faces'
+    photo1_dir = BEYOUTIFUL_PATH + '/photos/twin'
+    photo2_dir = BEYOUTIFUL_PATH + '/photos/twin'
 
     photo1_name = 'me1.jpg'
     photo2_name = 'me2.jpg'
