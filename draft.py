@@ -1,7 +1,2 @@
-ALL_ATTRIBUTES = ['AGE_RANGE', 'BEARD', 'EMOTIONS', 'EYE_DIRECTION',
-                        'EYEGLASSES', 'EYES_OPEN', 'GENDER', 'MOUTH_OPEN', 
-                        'MUSTACHE', 'FACE_OCCLUDED', 'SMILE', 'SUNGLASSES']
-
-n = []
-
-print(ALL_ATTRIBUTES) 
+class1 = "needsclick klaviyo-form klaviyo-form-version-cid_2 kl-private-reset-css-Xuajs1"
+class2 = "needsclick klaviyo-form klaviyo-form-version-cid_1 kl-private-reset-css-Xuajs1"

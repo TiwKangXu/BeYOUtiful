@@ -1,4 +1,0 @@
-2024-08-15 15:23:01,393 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
-2024-08-15 15:23:01,464 - ERROR - Error occurred: Parameter validation failed:
-Missing required parameter in input: "Image"
-Unknown parameter in input: "SourceImage", must be one of: Image, Attributes
